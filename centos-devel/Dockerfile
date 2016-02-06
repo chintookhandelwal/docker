@@ -12,3 +12,5 @@ RUN useradd -ms /bin/bash zizi
 RUN echo "zizi	ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER zizi
 WORKDIR /home/zizi
+
+VOLUME ["/home/zizi"]
