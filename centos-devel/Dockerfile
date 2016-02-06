@@ -5,7 +5,10 @@ RUN echo "include_only=.jp" >> /etc/yum/pluginconf.d/fastestmirror.conf
 
 RUN yum -y install epel-release
 
-RUN yum -y install sudo
+RUN yum -y install \
+  sudo \
+  tar
+  
 RUN yum -y groupinstall "Development Tools"
 
 RUN useradd -ms /bin/bash zizi
