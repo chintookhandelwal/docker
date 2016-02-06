@@ -7,7 +7,8 @@ RUN yum -y install epel-release
 
 RUN yum -y install \
   sudo \
-  tar
+  tar  \
+  wget
   
 RUN yum -y groupinstall "Development Tools"
 
