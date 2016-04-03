@@ -16,12 +16,4 @@ RUN yum update -y \
  && sed -i -e "s/enabled *= *1/enabled=0/g" /etc/yum.repos.d/ius.repo \
  && sed -i -e "s/enabled *= *1/enabled=0/g" /etc/yum.repos.d/groonga.repo
 
-RUN useradd -ms /bin/bash zizi \
- && echo "zizi	ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
- && mkdir /home/zizi/workspace
-
-USER zizi
-WORKDIR /home/zizi
-ENV SHELL /bin/bash
-
-VOLUME ["/home/zizi/workspace"]
+RUN mkdir /home/workspace

@@ -1,7 +1,5 @@
 FROM zizi0429/centos-devel
 
-USER root
-
 RUN yum -y install --enablerepo=ius \
         python34u-devel \
         python34u-setuptools \
@@ -18,7 +16,3 @@ RUN yum -y install --enablerepo=ius \
         pandas \
         scikit-learn \
         seaborn
-
-USER zizi
-WORKDIR /home/zizi
-ENV SHELL /bin/bash
