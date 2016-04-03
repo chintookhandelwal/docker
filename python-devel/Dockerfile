@@ -16,3 +16,4 @@ RUN yum -y install --enablerepo=ius \
         pandas \
         scikit-learn \
         seaborn
+
