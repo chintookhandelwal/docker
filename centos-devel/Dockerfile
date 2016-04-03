@@ -17,3 +17,4 @@ RUN yum update -y \
  && sed -i -e "s/enabled *= *1/enabled=0/g" /etc/yum.repos.d/groonga.repo
 
 RUN mkdir /home/workspace
+WORKDIR /home/workspace
