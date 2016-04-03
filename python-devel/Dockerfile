@@ -17,3 +17,4 @@ RUN yum -y install --enablerepo=ius \
         scikit-learn \
         seaborn
 
+WORKDIR /home/workspace
